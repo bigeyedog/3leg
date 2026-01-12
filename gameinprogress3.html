@@ -1701,9 +1701,9 @@
         }
         console.log(serial, p1Balance, p2Balance, p3Balance);
 
-        const p1Balance2Decimal = Number(p1Balance.toFixed(2));
-        const p2Balance2Decimal = Number(p2Balance.toFixed(2));
-        const p3Balance2Decimal = Number(p3Balance.toFixed(2));
+        const p1Balance2Decimal = Number(Number(p1Balance).toFixed(2));
+        const p2Balance2Decimal = Number(Number(p2Balance).toFixed(2));
+        const p3Balance2Decimal = Number(Number(p3Balance).toFixed(2));
 
         $("#p1Balance").text(p1Balance2Decimal);
         $("#p2Balance").text(p2Balance2Decimal);
@@ -1752,10 +1752,10 @@
         const col11text = $(p3ID).text();
         const col12text = "default";
 
-        const col9text2Decimal = Number(col9text.toFixed(2));
-        const col10text2Decimal = Number(col10text.toFixed(2));
-        const col11text2Decimal = Number(col11text.toFixed(2));
-        const col12text2Decimal = Number(col12text.toFixed(2));
+        const col9text2Decimal = Number(Number(col9text).toFixed(2));
+        const col10text2Decimal = Number(Number(col10text).toFixed(2));
+        const col11text2Decimal = Number(Number(col11text).toFixed(2));
+        const col12text2Decimal = Number(Number(col12text).toFixed(2));
 
         const newArray = [
           serial,
@@ -2038,9 +2038,9 @@
           //northBalance
         );
 
-        const p1Balance2Decimal = Number(p1Balance.toFixed(2));
-        const p2Balance2Decimal = Number(p2Balance.toFixed(2));
-        const p3Balance2Decimal = Number(p3Balance.toFixed(2));
+        const p1Balance2Decimal = Number(Number(p1Balance).toFixed(2));
+        const p2Balance2Decimal = Number(Number(p2Balance).toFixed(2));
+        const p3Balance2Decimal = Number(Number(p3Balance).toFixed(2));
 
         $("#p1Balance").text(p1Balance2Decimal);
         $("#p2Balance").text(p2Balance2Decimal);
@@ -2088,10 +2088,10 @@
         const col11text = $(p3ID).text();
         const col12text = "default";
 
-        const col9text2Decimal = Number(col9text.toFixed(2));
-        const col10text2Decimal = Number(col10text.toFixed(2));
-        const col11text2Decimal = Number(col11text.toFixed(2));
-        const col12text2Decimal = Number(col12text.toFixed(2));
+        const col9text2Decimal = Number(Number(col9text).toFixed(2));
+        const col10text2Decimal = Number(Number(col10text).toFixed(2));
+        const col11text2Decimal = Number(Number(col11text).toFixed(2));
+        const col12text2Decimal = Number(Number(col12text).toFixed(2));
 
         const newArray = [
           serial,
