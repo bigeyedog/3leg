@@ -1098,15 +1098,15 @@
 
         $("#tbody1").append($row);
 
-        $("#p1Balance").text(masterArray[maLength - 1][16]);
-        $("#p2Balance").text(masterArray[maLength - 1][17]);
-        $("#p3Balance").text(masterArray[maLength - 1][18]);
+        $("#p1Balance").text(Number(masterArray[maLength - 1][16].toFixed(2)));
+        $("#p2Balance").text(Number(masterArray[maLength - 1][17].toFixed(2)));
+        $("#p3Balance").text(Number(masterArray[maLength - 1][18].toFixed(2)));
         //$("#northBalance").text(masterArray[maLength - 1][19]);
 
         const balanceArray = [
-          Number(masterArray[maLength - 1][16]),
-          Number(masterArray[maLength - 1][17]),
-          Number(masterArray[maLength - 1][18]),
+          Number(masterArray[maLength - 1][16].toFixed(2)),
+          Number(masterArray[maLength - 1][17].toFixed(2)),
+          Number(masterArray[maLength - 1][18].toFixed(2)),
           // Number(masterArray[maLength - 1][19]),
         ];
         const balanceCellID = [
@@ -1701,15 +1701,19 @@
         }
         console.log(serial, p1Balance, p2Balance, p3Balance);
 
-        $("#p1Balance").text(p1Balance);
-        $("#p2Balance").text(p2Balance);
-        $("#p3Balance").text(p3Balance);
+        const p1Balance2Decimal = Number(p1Balance.toFixed(2));
+        const p2Balance2Decimal = Number(p2Balance.toFixed(2));
+        const p3Balance2Decimal = Number(p3Balance.toFixed(2));
+
+        $("#p1Balance").text(p1Balance2Decimal);
+        $("#p2Balance").text(p2Balance2Decimal);
+        $("#p3Balance").text(p3Balance2Decimal);
         //$("#northBalance").text(northBalance);
 
         const balanceArray = [
-          p1Balance,
-          p2Balance,
-          p3Balance,
+          p1Balance2Decimal,
+          p2Balance2Decimal,
+          p3Balance2Decimal,
           //northBalance,
         ];
         const balanceCellID = [
@@ -1748,6 +1752,11 @@
         const col11text = $(p3ID).text();
         const col12text = "default";
 
+        const col9text2Decimal = Number(col9text.toFixed(2));
+        const col10text2Decimal = Number(col10text.toFixed(2));
+        const col11text2Decimal = Number(col11text.toFixed(2));
+        const col12text2Decimal = Number(col12text.toFixed(2));
+
         const newArray = [
           serial,
           roundnumber,
@@ -1757,17 +1766,17 @@
           col6text,
           col7text,
           col8text,
-          col9text,
-          col10text,
-          col11text,
-          col12text,
+          col9text2Decimal,
+          col10text2Decimal,
+          col11text2Decimal,
+          col12text2Decimal,
           nextSerial,
           nextRoundNumber,
           nextRound,
           nextZhuang,
-          p1Balance,
-          p2Balance,
-          p3Balance,
+          p1Balance2Decimal,
+          p2Balance2Decimal,
+          p3Balance2Decimal,
           "default",
         ];
         masterArray.push(newArray);
@@ -2029,12 +2038,20 @@
           //northBalance
         );
 
-        $("#p1Balance").text(p1Balance);
-        $("#p2Balance").text(p2Balance);
-        $("#p3Balance").text(p3Balance);
+        const p1Balance2Decimal = Number(p1Balance.toFixed(2));
+        const p2Balance2Decimal = Number(p2Balance.toFixed(2));
+        const p3Balance2Decimal = Number(p3Balance.toFixed(2));
+
+        $("#p1Balance").text(p1Balance2Decimal);
+        $("#p2Balance").text(p2Balance2Decimal);
+        $("#p3Balance").text(p3Balance2Decimal);
         //$("#northBalance").text(northBalance);
 
-        const balanceArray = [p1Balance, p2Balance, p3Balance];
+        const balanceArray = [
+          p1Balance2Decimal,
+          p2Balance2Decimal,
+          p3Balance2Decimal,
+        ];
         const balanceCellID = ["#p1Balance", "#p2Balance", "#p3Balance"];
         for (let i = 0; i < 3; i++) {
           if (balanceArray[i] < 0) {
@@ -2071,6 +2088,11 @@
         const col11text = $(p3ID).text();
         const col12text = "default";
 
+        const col9text2Decimal = Number(col9text.toFixed(2));
+        const col10text2Decimal = Number(col10text.toFixed(2));
+        const col11text2Decimal = Number(col11text.toFixed(2));
+        const col12text2Decimal = Number(col12text.toFixed(2));
+
         const newArray = [
           serial,
           roundnumber,
@@ -2080,17 +2102,17 @@
           col6text,
           col7text,
           col8text,
-          col9text,
-          col10text,
-          col11text,
-          col12text,
+          col9text2Decimal,
+          col10text2Decimal,
+          col11text2Decimal,
+          col12text2Decimal,
           nextSerial,
           nextRoundNumber,
           nextRound,
           inputZhuang,
-          p1Balance,
-          p2Balance,
-          p3Balance,
+          p1Balance2Decimal,
+          p2Balance2Decimal,
+          p3Balance2Decimal,
           "default",
         ];
         masterArray.push(newArray);
@@ -2183,12 +2205,20 @@
             }
             console.log(serial, p1Balance, p2Balance, p3Balance);
 
-            $("#p1Balance").text(p1Balance);
-            $("#p2Balance").text(p2Balance);
-            $("#p3Balance").text(p3Balance);
+            const p1Balance2Decimal = Number(p1Balance.toFixed(2));
+            const p2Balance2Decimal = Number(p2Balance.toFixed(2));
+            const p3Balance2Decimal = Number(p3Balance.toFixed(2));
+
+            $("#p1Balance").text(p1Balance2Decimal);
+            $("#p2Balance").text(p2Balance2Decimal);
+            $("#p3Balance").text(p3Balance2Decimal);
             //$("#northBalance").text(northBalance);
 
-            const balanceArray = [p1Balance, p2Balance, p3Balance];
+            const balanceArray = [
+              p1Balance2Decimal,
+              p2Balance2Decimal,
+              p3Balance2Decimal,
+            ];
             const balanceCellID = ["#p1Balance", "#p2Balance", "#p3Balance"];
             for (let i = 0; i < 3; i++) {
               if (balanceArray[i] < 0) {
